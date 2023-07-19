@@ -8,8 +8,6 @@ import Contact from "./Components/Contact.js";
 import Loader from "./Components/Loader.js";
 import Footer from "./Components/Footer.js";
 import Navigator from "../src/Components/Navigation .js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 function App() {
   return (
