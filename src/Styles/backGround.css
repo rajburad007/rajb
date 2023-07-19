@@ -1,0 +1,180 @@
+.circles {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0px;
+  border-radius: 50%;
+  border: 10px solid pink;
+  top: -100px;
+  left: 500px;
+  animation-name: move;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 0px;
+  background-color: greenyellow;
+  /* border-radius: 50%; */
+  /* border: 10px solid pink; */
+  top: 500px;
+  left: 200px;
+  animation-name: moveRot;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.pattern {
+  position: absolute;
+  height: 100px;
+
+  display: flex;
+  bottom: 200px;
+  right: 200px;
+  overflow: hidden;
+  width: 40px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  animation-name: moveUp;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.pattern div {
+  position: relative;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: cyan;
+  width: 10px;
+  z-index: 1;
+  height: 10px;
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(-100px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateX(200px) rotateZ(360deg);
+  }
+  100% {
+    transform: translateX(-100px) rotate(0deg);
+  }
+}
+@keyframes moveRot {
+  0% {
+    transform: translateY(-100px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(200px) rotateZ(360deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .circles {
+    width: 70px;
+    height: 70px;
+    top: 150px;
+    left: 400px;
+    animation-name: move;
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(-100px) rotateZ(0deg);
+    }
+    50% {
+      transform: translateX(100px) rotateZ(360deg);
+    }
+    100% {
+      transform: translateX(-100px) rotate(0deg);
+    }
+  }
+  @keyframes moveRot {
+    0% {
+      transform: translateY(-30px) rotateZ(0deg);
+    }
+    50% {
+      transform: translateY(20px) rotateZ(360deg);
+    }
+    100% {
+      transform: translateY(-30px) rotate(0deg);
+    }
+  }
+
+  .triangle {
+    width: 50px;
+    height: 50px;
+    top: 500px;
+    left: 100px;
+  }
+  .pattern {
+    right: 100px;
+  }
+  .pattern div {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .circles {
+    width: 40px;
+    height: 40px;
+    left: 200px;
+    top: 200px;
+    animation-name: move;
+    border: 5px solid pink;
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(-60px) rotateZ(0deg);
+    }
+    50% {
+      transform: translateX(60px) rotateZ(360deg);
+    }
+    100% {
+      transform: translateX(-60px) rotate(0deg);
+    }
+  }
+  @keyframes moveRot {
+    0% {
+      transform: translateY(-50px) rotateZ(0deg);
+    }
+    50% {
+      transform: translateY(50px) rotateZ(360deg);
+    }
+    100% {
+      transform: translateY(-50px) rotate(0deg);
+    }
+  }
+  .triangle {
+    width: 25px;
+    height: 25px;
+  }
+  .pattern {
+    width: 20px;
+    height: 60px;
+  }
+  .pattern div {
+    margin: 3px;
+    width: 5px;
+    height: 5px;
+  }
+}

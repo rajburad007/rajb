@@ -1,0 +1,60 @@
+.workSection {
+  background-color: var(--black);
+  color: var(--white);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.workSection h1 {
+  margin-bottom: 70px;
+}
+.workTabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 1000px;
+  margin-bottom: 70px;
+}
+.workLink {
+  margin: 20px;
+  display: flex;
+  background-color: var(--white);
+  width: 250px;
+  border-radius: 10px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+.worklinkBefore {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), var(--black));
+  border-radius: 10px;
+  top: 200px;
+  padding: 10px;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+.workLink:hover .worklinkBefore {
+  top: 100px;
+}
+.moreWork {
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px black;
+}
+.moreWork button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  cursor: pointer;
+  font-size: 15px;
+}

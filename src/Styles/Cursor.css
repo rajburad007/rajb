@@ -1,0 +1,37 @@
+.cursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  border: 1px dashed var(--white);
+  animation-name: wheeled;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  cursor: none;
+}
+@keyframes wheeled {
+  0% {
+    width: 15px;
+    height: 15px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media only screen and (max-width: 850px) and (min-width: 500px) {
+  .cursor {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .cursor {
+    display: none;
+  }
+}
